@@ -31,18 +31,18 @@ while play == 'y':
     computer = []
     for i in range(2):
         player.append(random.choice(deck))
-    computer.append(random.choice(deck))
+        computer.append(random.choice(deck))
     player_total = sum(player)
     computer_total = sum(computer)
 
     if computer_total == 21:
         output(player_total, player, computer)
         output2(0, 0, player, computer)
-        print("Computer has a Blackjack. You lose")
+        print("Computer has Blackjack. You lose")
     elif player_total == 21:
         output(player_total, player, computer)
         output2(0, 0, player, computer)
-        print("Win with a Blackjack")
+        print("You win with a Blackjack")
     else:
         if player_total > 21 and (11 in player):
             player[player.index(11)] = 1
